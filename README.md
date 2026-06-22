@@ -18,11 +18,11 @@ An interactive web application for learning and visualizing Data Structures thro
 * CSS3
 * JavaScript
 
- 🔗 Repository
-[DS_Webpage GitHub Repository](https://github.com/Hazara-02/DS_Webpage?utm_source=chatgpt.com)
+ 🔗 GitHub Repository
+DSA_WebPage Repository
 
 🎯 Purpose
 This project was created to make learning Data Structures more interactive, visual, and engaging for students and beginners.
 ⭐ If you like this project, consider giving it a star on GitHub! 🚀
 
-https://github.com/Hazara-02/DS_Webpage.git "GitHub - Hazara-02/DS_Webpage · GitHub"
+
