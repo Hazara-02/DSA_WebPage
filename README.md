@@ -19,7 +19,7 @@ An interactive web application for learning and visualizing Data Structures thro
 * JavaScript
 
  🔗 GitHub Repository
-DSA_WebPage Repository
+https://github.com/Hazara-02/DSA_WebPage
 
 🎯 Purpose
 This project was created to make learning Data Structures more interactive, visual, and engaging for students and beginners.
