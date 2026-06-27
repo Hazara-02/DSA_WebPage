@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Data Structures Visualizer — Learn, Visualize, Master</title>
+<meta name="description" content="Interactive data structures visualizer and learning platform with animated simulators for arrays, linked lists, stacks, queues, trees, heaps, tries, and graphs." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+<div id="particles" aria-hidden="true"></div>
+
+<!-- Loader -->
+<div id="loader" class="loader"><div class="loader-ring"></div><span>Loading…</span></div>
+
+<!-- Navigation -->
+<nav class="nav glass">
+  <div class="nav-inner">
+    <a href="#hero" class="brand">
+      <span class="brand-mark">DS</span>
+      <span class="brand-text">Visualizer</span>
+    </a>
+    <div class="nav-links">
+      <a href="#classification">Classify</a>
+      <a href="#cards">Learn</a>
+      <a href="#simulators">Simulate</a>
+      <a href="#complexity">Complexity</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <div class="search-wrap">
+        <input id="globalSearch" type="search" placeholder="Search structures…" aria-label="Search data structures" />
+        <kbd>/</kbd>
+      </div>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header id="hero" class="hero">
+  <div class="hero-bg">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow glass">A modern learning playground</span>
+    <h1 class="hero-title">Data Structures <span class="grad-text">Visualizer</span></h1>
+    <p class="hero-tag">Learn, Visualize, and Master Data Structures.</p>
+    <p class="hero-sub">An interactive platform that turns abstract concepts into living animations — explore arrays, linked lists, trees, heaps, tries, and graphs with real-time operations, complexity analysis, and step-by-step pseudocode.</p>
+    <div class="hero-cta">
+      <a href="#simulators" class="btn btn-primary">Start Exploring</a>
+      <a href="#classification" class="btn btn-ghost">View Classification</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat glass"><b>12+</b><span>Simulators</span></div>
+      <div class="stat glass"><b>50+</b><span>Operations</span></div>
+      <div class="stat glass"><b>∞</b><span>Practice</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- Classification -->
+<section id="classification" class="section">
+  <div class="section-head">
+    <span class="kicker">01 — Map</span>
+    <h2>The Landscape of Data Structures</h2>
+    <p>An interactive hierarchy — click any node to jump straight to its simulator.</p>
+  </div>
+  <div class="tree-diagram glass" id="treeDiagram"></div>
+</section>
+
+<!-- Information Cards -->
+<section id="cards" class="section">
+  <div class="section-head">
+    <span class="kicker">02 — Learn</span>
+    <h2>Concept Cards</h2>
+    <p>Expandable cards with definitions, operations, complexities, and real-world applications.</p>
+  </div>
+  <div class="cards-grid" id="cardsGrid"></div>
+</section>
+
+<!-- Simulators -->
+<section id="simulators" class="section">
+  <div class="section-head">
+    <span class="kicker">03 — Simulate</span>
+    <h2>Interactive Simulators</h2>
+    <p>Perform operations and watch the structure react in real time.</p>
+  </div>
+  <div class="sim-tabs" id="simTabs"></div>
+  <div class="sim-panel glass" id="simPanel"></div>
+</section>
+
+<!-- Complexity -->
+<section id="complexity" class="section">
+  <div class="section-head">
+    <span class="kicker">04 — Analyze</span>
+    <h2>Complexity Comparison</h2>
+    <p>Sortable, filterable table of access, search, insert, delete, and space complexities.</p>
+  </div>
+  <div class="complexity-controls">
+    <input id="complexityFilter" type="search" placeholder="Filter by name…" />
+  </div>
+  <div class="table-wrap glass">
+    <table id="complexityTable">
+      <thead>
+        <tr>
+          <th data-key="name">Data Structure</th>
+          <th data-key="access">Access</th>
+          <th data-key="search">Search</th>
+          <th data-key="insert">Insert</th>
+          <th data-key="delete">Delete</th>
+          <th data-key="space">Space</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section contact">
+  <div class="contact-card glass">
+    <span class="kicker">05 — Connect</span>
+    <h2>Data Structures Visualizer</h2>
+    <p>Built as a modern educational platform — a portfolio-grade mini project blending learning, visualization, and design.</p>
+    <div class="contact-buttons">
+      <a class="btn btn-primary" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="mailto:hello@example.com">Email</a>
+    </div>
+    <p class="muted small">© <span id="year"></span> Data Structures Visualizer · Crafted with HTML, CSS &amp; vanilla JS</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
